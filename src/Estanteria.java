@@ -16,7 +16,7 @@ public class Estanteria {
     }
 
     public void mostrarEstante() {
-        System.out.println("\n📚 Estante de Matemáticas:");
+        System.out.println("\n📚 Estante de Libros de Fantasía:");
         for (int i = 0; i < libros.length; i++) {
             System.out.println("[" + i + "] " + libros[i]);
         }

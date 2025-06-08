@@ -5,14 +5,14 @@ public class BibliotecaApp {
         
         Scanner sc = new Scanner(System.in);
         
-
         Estanteria estanteria = new Estanteria(5);
+        NuevosLibros nuevos = new NuevosLibros();
 
         int opcion;
         do {
             System.out.println("\n===== 📚 Biblioteca Escolar =====");
-            System.out.println("1. Ver estante de matemáticas");
-            System.out.println("2. Agregar libro nuevo");
+            System.out.println("1. 📚 Ver estante de matemáticas");
+            System.out.println("2. 📖 Agregar libro nuevo");
             System.out.println("3. Mostrar libros nuevos");
             System.out.println("4. Registrar préstamo");
             System.out.println("5. Ver préstamos del día");
@@ -25,6 +25,11 @@ public class BibliotecaApp {
 
             switch (opcion) {
                 case 1 -> estanteria.mostrarEstante();
+                case 2 -> {
+                    System.out.print("Nombre del libro nuevo: ");
+                    String libroNuevo = sc.nextLine();
+                    nuevos.agregar(libroNuevo);
+                }
             }
         } while (opcion != 8);
 
