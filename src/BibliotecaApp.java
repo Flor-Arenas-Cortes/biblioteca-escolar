@@ -8,6 +8,7 @@ public class BibliotecaApp {
         Estanteria estanteria = new Estanteria(5);
         NuevosLibros nuevos = new NuevosLibros();
         Prestamos prestamos = new Prestamos();
+        Devoluciones devoluciones = new Devoluciones();
         
 
         int opcion;
@@ -39,6 +40,11 @@ public class BibliotecaApp {
                     prestamos.registrar(prestamo);
                 }
                 case 5 -> prestamos.mostrar();
+                case 6 -> {
+                    System.out.print("Nombre del libro devuelto: ");
+                    String devolucion = sc.nextLine();
+                    devoluciones.devolver(devolucion);
+                }
             }
         } while (opcion != 8);
 
