@@ -7,15 +7,17 @@ public class BibliotecaApp {
         
         Estanteria estanteria = new Estanteria(5);
         NuevosLibros nuevos = new NuevosLibros();
+        Prestamos prestamos = new Prestamos();
+        
 
         int opcion;
         do {
             System.out.println("\n===== 📚 Biblioteca Escolar =====");
             System.out.println("1. 📚 Ver estante de matemáticas");
             System.out.println("2. 📖 Agregar libro nuevo");
-            System.out.println("3. Mostrar libros nuevos");
-            System.out.println("4. Registrar préstamo");
-            System.out.println("5. Ver préstamos del día");
+            System.out.println("3. 📖 Mostrar libros nuevos");
+            System.out.println("4. 📋 Registrar préstamo");
+            System.out.println("5. 📋 Ver préstamos del día");
             System.out.println("6. Devolver libro (a pila)");
             System.out.println("7. Atender estudiante en fila");
             System.out.println("8. Salir");
@@ -30,6 +32,13 @@ public class BibliotecaApp {
                     String libroNuevo = sc.nextLine();
                     nuevos.agregar(libroNuevo);
                 }
+                case 3 -> nuevos.mostrar();
+                case 4 -> {
+                    System.out.print("Nombre del libro a prestar: ");
+                    String prestamo = sc.nextLine();
+                    prestamos.registrar(prestamo);
+                }
+                case 5 -> prestamos.mostrar();
             }
         } while (opcion != 8);
 
