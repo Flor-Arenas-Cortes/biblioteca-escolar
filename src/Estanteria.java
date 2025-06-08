@@ -16,9 +16,9 @@ public class Estanteria {
     }
 
     public void mostrarEstante() {
-        System.out.println("\n====== Estantería de Fantasía ======");
+        System.out.println("\n📚 Estante de Matemáticas:");
         for (int i = 0; i < libros.length; i++) {
-            System.out.println("Posición " + i + ": " + libros[i]);
+            System.out.println("[" + i + "] " + libros[i]);
         }
     }
 }
